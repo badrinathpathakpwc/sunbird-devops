@@ -2,7 +2,7 @@ FROM alpine:3.9
 
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
 
-ENV NGINX_VERSION 1.15.8
+ENV NGINX_VERSION 1.18.0
 
 ENV LUAJIT_LIB=/usr/local/lib
 ENV LUAJIT_INC=/usr/local/include/luajit-2.1
