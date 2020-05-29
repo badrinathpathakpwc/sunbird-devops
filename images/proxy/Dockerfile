@@ -10,7 +10,10 @@ ENV LUAJIT_INC=/usr/local/include/luajit-2.1
 COPY nginx_devel_kit /opt/nginx_devel_kit
 COPY luajit /usr/src/luajit
 COPY nginx_lua /opt/nginx_lua
-
+RUN echo 'https://dl-3.alpinelinux.org/alpine/v3.4/main' > /etc/apk/repositories && \ 
+    echo '@testing https://dl-3.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
+    echo '@community https://dl-3.alpinelinux.org/alpine/v3.4/community'
+    
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && CONFIG="\
         --prefix=/etc/nginx \
